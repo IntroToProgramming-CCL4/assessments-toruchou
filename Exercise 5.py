@@ -30,8 +30,7 @@ month_name = {
     12: "December"
 }
 
-# input for month and year
-month_num = int(input("Enter the month number (1-12): "))
+# input for year
 year = int(input("Enter the year: "))
 
 # checks if year input equals to a leap year, if so, change days of Feb to 29
@@ -39,9 +38,12 @@ if (year % 4 == 0 and year % 100 != 0) or (year % 400 == 0):
     month_days[2] = 29
 
 # checks if the month number is valid
-if 1 <= month_num <= 12:
-    print(f"The number of days in {month_name[month_num]} {year} is {month_days[month_num]}")
-else:
-    print("Invalid month number. Please enter a number between 1 and 12.")
+while True:
+    month_num = int(input("Enter the month number (1-12): "))
+    if 1 <= month_num <= 12:
+        print(f"The number of days in {month_name[month_num]} {year} is {month_days[month_num]}")
+        break
+    else:
+        print("Invalid month number. Please enter a number between 1 and 12.")
 
 # leap years don't exist (controversial opinion) jk
