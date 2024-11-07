@@ -45,4 +45,5 @@ time.sleep(1)
 for country, capital in countries_and_capitals.items():
     ask_question(country, capital)
 
+# prints the final message and the user's score
 print(f"\nQuiz complete! You answered all the questions.\nYour final score is {score}/6!")
