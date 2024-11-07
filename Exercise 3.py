@@ -5,11 +5,10 @@ my_info = {}
 my_info['name'] = input("Enter your name (first and last): ")
 my_info['hometown'] = input("Enter your hometown: ")
 
-# loop to ensure valid age input (it must be a number)
+# loop to make sure the input is valid (it must be a number)
 while True:
     age_input = input("Enter your age: ")
 
-    # Try to convert age to an integer
     try:
         my_info['age'] = int(age_input)
         break  # this is to exit the loop if age is valid
