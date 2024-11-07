@@ -1,7 +1,7 @@
 import time
 import random
 
-# these are random responses when the user gets the wrong aswer
+# these are random responses when the user gets the wrong answer
 responses = [
     "Nice try, but nope.",
     "Oof, that's not it.",
