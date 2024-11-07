@@ -1,7 +1,7 @@
 # first loop - 0 to 50 in increments of 1
 for n in range(0, 51, 1):
     print(n, end=", ")
-print("\n")
+print("\n") # adds space between each counting instance
 
 # second loop - 50 to 0 in decrements of 1
 for n in range(50, -1, -1):
