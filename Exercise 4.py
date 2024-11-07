@@ -31,7 +31,7 @@ def ask_question(country, capital):
     if answer == capital:
         time.sleep(1)
         print(f"Niceu, you're correct! {capital.title()} is the capital of {country.title()}.")
-        score += 1
+        score += 1 # adds 1 score since correct
     else:
         print(random.choice(responses))
         time.sleep(1)
