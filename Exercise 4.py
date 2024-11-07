@@ -1,25 +1,48 @@
 import time
 import random
 
-# these are random responses when the user gets the wrong answer
+# Tis is the list of east asian countries and their capitals
+countries_and_capitals = {
+    "china": "beijing",
+    "japan": "tokyo",
+    "south korea": "seoul",
+    "north korea": "pyongyang",
+    "taiwan": "taipei",
+    "mongolia": "ulaanbaatar",
+}
+
+# random responses when the user gets the wrong answer
 responses = [
     "Nice try, but nope.",
     "Oof, that's not it.",
-    "oh come on, you can do better.",
+    "Oh come on, you can do better.",
     "Bruh, really?"
 ]
 
-# this prints the question, but with a dramatic pause xd
-print("Thinking...")
-time.sleep(2)
-answer = str(input("What is the capital of Japan? ")).strip().lower()
+score = 0
 
-# checks if the answer is correct or nah and gives a response
-if answer == "tokyo":
-    time.sleep(1)
-    print("Niceu, you're correct! Tokyo is the capital of Japan.")
-else:
-    # this picks a random response in the dictionary
-    print(random.choice(responses))
-    time.sleep(1)
-    print("The correct answer is Tokyo!")
+# function to ask the user the capital of a country
+def ask_question(country, capital):
+    global score
+    print(f"\nWhat is the capital of {country.title()}?")
+    time.sleep(2)
+    answer = input().strip().lower()
+
+    if answer == capital:
+        time.sleep(1)
+        print(f"Niceu, you're correct! {capital.title()} is the capital of {country.title()}.")
+        score += 1
+    else:
+        print(random.choice(responses))
+        time.sleep(1)
+        print(f"The correct answer is {capital.title()}!")
+
+# starting msg
+print("This is the East Asian Capitals Quiz!")
+time.sleep(1)
+
+# loop through each country in the dictionary and ask the user
+for country, capital in countries_and_capitals.items():
+    ask_question(country, capital)
+
+print(f"\nQuiz complete! You answered all the questions.\nYour final score is {score}/6!")
