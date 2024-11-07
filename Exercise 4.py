@@ -19,7 +19,7 @@ responses = [
     "Bruh, really?"
 ]
 
-score = 0
+score = 0 # initial quiz score
 
 # function to ask the user the capital of a country
 def ask_question(country, capital):
