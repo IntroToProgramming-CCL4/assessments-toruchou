@@ -12,7 +12,7 @@ responses = [
 # this prints the question, but with a dramatic pause xd
 print("Thinking...")
 time.sleep(2)
-answer = input("What is the capital of Japan? ").strip().lower()
+answer = str(input("What is the capital of Japan? ")).strip().lower()
 
 # checks if the answer is correct or nah and gives a response
 if answer == "tokyo":
