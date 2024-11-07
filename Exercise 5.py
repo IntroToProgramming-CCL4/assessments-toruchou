@@ -44,4 +44,4 @@ if 1 <= month_num <= 12:
 else:
     print("Invalid month number. Please enter a number between 1 and 12.")
 
-# leap years don't exist (controvertial opinion) jk
+# leap years don't exist (controversial opinion) jk
