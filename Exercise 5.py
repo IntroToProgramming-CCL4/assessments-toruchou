@@ -1,7 +1,7 @@
-# dictionary for the days in months (exculding leap years... for now)
+# dictionary for the days in months
 month_days = {
     1: 31,
-    2: 28,
+    2: 28,  # Will be adjusted if it's leap year
     3: 31,
     4: 30,
     5: 31,
@@ -30,10 +30,18 @@ month_name = {
     12: "December"
 }
 
+# input for month and year
 month_num = int(input("Enter the month number (1-12): "))
+year = int(input("Enter the year: "))
 
-# checks if the input is valid and print the number of days in that month
+# checks if year input equals to a leap year, if so, change days of Feb to 29
+if (year % 4 == 0 and year % 100 != 0) or (year % 400 == 0):
+    month_days[2] = 29
+
+# checks if the month number is valid
 if 1 <= month_num <= 12:
-    print(f"The number of days in {month_name[month_num]} is {month_days[month_num]}")
+    print(f"The number of days in {month_name[month_num]} {year} is {month_days[month_num]}")
 else:
     print("Invalid month number. Please enter a number between 1 and 12.")
+
+# leap years don't exist (controvertial opinion) jk
